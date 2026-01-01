@@ -26,7 +26,7 @@ export default function TabLayout() {
         tabBarShowLabel: false,
         tabBarBounces: false,
         animationEnabled: false,
-        tabBarStyle: { height: 95, backgroundColor: colorScheme === 'dark' ? Colors.dark.card : Colors.light.bg, borderTopColor: Colors[colorScheme ?? 'light'].border, paddingTop: 15 }
+        tabBarStyle: { height: 95, borderTopWidth: 1, backgroundColor: colorScheme === 'dark' ? Colors.dark.card : Colors.light.bg, borderTopColor: Colors[colorScheme ?? 'light'].border, paddingTop: 15 }
       }}
       pageMargin={40}
     >
@@ -35,7 +35,7 @@ export default function TabLayout() {
         component={Locations}
         options={{
           title: '',
-          tabBarIcon: ({ color, focused }) => focused ? <MapSolid size={21} color={color} /> : <MapOutline size={21} color={color} />,
+          tabBarIcon: ({ color, focused }) => focused ? <MapSolid size={23} color={color} /> : <MapOutline size={23} color={color} />,
         }}
       />
       <Tab.Screen
@@ -43,7 +43,7 @@ export default function TabLayout() {
         component={Chats}
         options={{
           title: '',
-          tabBarIcon: ({ color, focused }) => focused ? <ChatSolid size={21} color={color} /> : <ChatOutline size={21} color={color} />,
+          tabBarIcon: ({ color, focused }) => focused ? <ChatSolid size={23} color={color} /> : <ChatOutline size={20} color={color} />,
           tabBarBadge: () => (<ThemedView style={{ backgroundColor: Colors[colorScheme ?? 'dark'].red, width: 15, height: 15, borderRadius: 99, outlineWidth: 2, outlineColor: colorScheme === 'dark' ? Colors.dark.card : Colors.light.bg, right: 25, top: 7 }} />)
         }}
       />
@@ -52,7 +52,7 @@ export default function TabLayout() {
         component={Camera}
         options={{
           title: '',
-          tabBarIcon: ({ color, focused }) => focused ? <CameraSolid size={21} color={color} /> : <CameraOutline size={21} color={color} />
+          tabBarIcon: ({ color, focused }) => focused ? <CameraSolid size={23} color={color} /> : <CameraOutline size={23} color={color} />
         }}
       />
       <Tab.Screen
@@ -60,7 +60,7 @@ export default function TabLayout() {
         component={Stories}
         options={{
           title: '',
-          tabBarIcon: ({ color, focused }) => focused ? <StoriesSolid size={21} color={color} /> : <StoriesOutline size={21} color={color} />,
+          tabBarIcon: ({ color, focused }) => focused ? <StoriesSolid size={23} color={color} /> : <StoriesOutline size={23} color={color} />,
         }}
       />
       <Tab.Screen
@@ -69,7 +69,7 @@ export default function TabLayout() {
         options={{
           title: '',
           tabBarBadge: () => (<ThemedView style={{ backgroundColor: Colors[colorScheme ?? 'dark'].red, width: 15, height: 15, borderRadius: 99, outlineWidth: 2, outlineColor: colorScheme === 'dark' ? Colors.dark.card : Colors.light.bg, right: 25, top: 7 }} />),
-          tabBarIcon: ({ color, focused }) => focused ? <SpotlightSolid size={21} color={color} /> : <SpotlightOutline size={21} color={color} />,
+          tabBarIcon: ({ color, focused }) => focused ? <SpotlightSolid size={23} color={color} /> : <SpotlightOutline size={23} color={color} />,
         }}
       />
     </ Tab.Navigator>
